@@ -84,8 +84,8 @@ def timelines_merge(tls, key1, key2, key_out):
 
 def timelines_preprocess(tls)->Dict[Tuple[Province_State,Country_Region],TimeLine]:
   """ Merge Moscow and Moscow oblast """
-  timelines_merge(tls, ('Moscow','Russia'), ('Moscow oblast','Russia'), ('Moscow+MO','Russia'))
-  timelines_merge(tls, ('Saint Petersburg','Russia'), ('Leningradskaya oblast','Russia'), ('SPb+LO','Russia'))
+  timelines_merge(tls, ('Moscow','Russia'), ('Moscow Oblast','Russia'), ('Moscow+MO','Russia'))
+  timelines_merge(tls, ('Saint Petersburg','Russia'), ('Leningrad Oblast','Russia'), ('SPb+LO','Russia'))
   del tls[('','Russia')]
   return tls
 
