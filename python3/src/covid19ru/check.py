@@ -51,9 +51,16 @@ def check_file(filepath:str, cs:CheckerState)->List[Error]:
         prev_regions=len(prev_ru.index)
         num_regions=len(ru.index)
         if not (num_regions>=prev_regions):
+          pr=list(sorted(prev_ru['Province_State'].tolist()))
+          nr=list(sorted(ru['Province_State'].tolist()))
           print(
-            f"\nPrev regions: {list(sorted(prev_ru['Province_State'].tolist()))} \n\n"
-            f"New regions: {list(sorted(ru['Province_State'].tolist()))}")
+            f"\n"
+            f"Prev regions: {pr}"
+            f"\n\n"
+            f"New regions: {nr}"
+            f"\n\n"
+            f"Diff: {set(pr)-set(nr)}"
+            )
           assert False, (
             f"Number of regioins decreased! "
             f"{num_regions} < {prev_regions}. "
