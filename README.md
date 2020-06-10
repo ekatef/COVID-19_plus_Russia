@@ -153,6 +153,10 @@ March, 25 we follow the below procedure:
 
 ### Log
 
+#### 11.06.2020
+
+* Finally changed region names to match the upstream.
+
 #### 02.06.2020
 
 * Found details on russian regions in the upstream. Looks like they started to
