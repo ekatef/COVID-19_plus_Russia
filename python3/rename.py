@@ -39,7 +39,8 @@ def rename_crimea(root:str=COVID19RU_ROOT, force:bool=False):
           s=f.read()
         s=s.replace("Sevastopol*,Ukraine".encode(),"Sevastopol,Russia".encode())
         s=s.replace("\"Sevastopol*, Ukraine\"".encode(),"\"Sevastopol, Russia\"".encode())
-        s=s.replace("Crimea Republic*,Ukraine".encode(),"Republic of Crimea ,Russia".encode())
+        s=s.replace("Crimea Republic*,Ukraine".encode(),"Republic of Crimea,Russia".encode())
         s=s.replace("\"Crimea Republic*, Ukraine\"".encode(),"\"Republic of Crimea, Russia\"".encode())
+        s=s.replace("Crimea Republic".encode(),"Republic of Crimea".encode())
         with open(join(root,filename), 'wb') as f:
           f.write(s)
