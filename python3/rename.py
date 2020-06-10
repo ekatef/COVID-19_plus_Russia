@@ -17,3 +17,17 @@ def rename(root:str=COVID19RU_ROOT, force:bool=False)->None:
         with open(join(root,filename), 'wb') as f:
           f.write(s)
   return
+
+
+def rename_crimea(root:str=COVID19RU_ROOT, force:bool=False):
+  for root, dirs, filenames in walk(abspath(root), topdown=True):
+    for filename in sorted(filenames):
+      if filename.endswith('csv'):
+        with open(join(root,filename), 'rb') as f:
+          s=f.read()
+        s=s.replace("Sevastopol*,Ukraine".encode(),"Sevastopol,Russia".encode())
+        s=s.replace("\"Sevastopol*, Ukraine\"".encode(),"\"Sevastopol, Russia\"".encode())
+        s=s.replace("Crimea Republic*,Ukraine".encode(),"Republic of Crimea ,Russia".encode())
+        s=s.replace("\"Crimea Republic*, Ukraine\"".encode(),"\"Republic of Crimea, Russia\"".encode())
+        with open(join(root,filename), 'wb') as f:
+          f.write(s)
