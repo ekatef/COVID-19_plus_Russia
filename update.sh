@@ -8,9 +8,9 @@ cd python3
 python -c 'from rename import *; rename_crimea()'
 python check.py
 NERR=$?
-if test "$NERR" != "5" ; then
-  echo "New errors have appeared."
+if test "$NERR" != "6" ; then
+  echo "New errors have appeared. Check the list above."
   exit
 fi
-python -c 'from covid19ru.access import *; ru_timeline_dump()'
+python dump.py
 python plot.py
