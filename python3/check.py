@@ -3,5 +3,7 @@
 from covid19ru.check import check_all
 
 err=check_all()
-if err:
+if len(err)>0:
   print(err)
+
+exit(len(err))
