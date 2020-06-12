@@ -82,6 +82,22 @@ def timelines_merge(tls, key1, key2, key_out):
   del tls[key2]
   return tls
 
+def timelines_merge_regions(tls):
+  def _todict(tl:TimeLine)->dict:
+    return {date:(c,d,r) for date,c,d,r in zip(tl.dates,tl.confirmed,tl.deaths,tl.recovered)}
+
+  acc={}
+  for _,tl in tls.items():
+    tld=_todict(tl)
+    for date,(c,d,r) in tld.items():
+      if date not in acc:
+        acc[date]=(0,0,0)
+      acc[date]=(acc[date][0]+c,acc[date][1]+d,acc[date][2]+r)
+
+  dates,tuples=list(acc.keys()),list(acc.values())
+  cs,ds,rs=zip(*tuples)
+  return mktimeline(dates,cs,ds,rs)
+
 def timelines_preprocess(tls)->Dict[Tuple[Province_State,Country_Region],TimeLine]:
   """ Merge Moscow and Moscow oblast """
   timelines_merge(tls, ('Moscow','Russia'), ('Moscow Oblast','Russia'), ('Moscow+MO','Russia'))
@@ -153,10 +169,14 @@ def plot_(metric_fn,
   tls_list=tls_list[rng[0]:rng[1]]
   out:Dict[Tuple[str,str],TimeLine]=OrderedDict()
   out.update({k:v for k,v in tls_list})
-  out[('', 'Italy (ref)')]=list(timelines(country_region='Italy', default_loc='').values())[0]
-  out[('', 'Japan (ref)')]=list(timelines(country_region='Japan', default_loc='').values())[0]
-  out[('', 'Ukraine (ref)')]=list(timelines(country_region='Ukraine', default_loc='').values())[0]
-  out[('', 'Belarus (ref)')]=list(timelines(country_region='Belarus', default_loc='').values())[0]
+  out[('', 'Italy (ref)')]=\
+    timelines_merge_regions(timelines(country_region='Italy', default_loc=''))
+  out[('', 'Japan (ref)')]=\
+    timelines_merge_regions(timelines(country_region='Japan', default_loc=''))
+  out[('', 'Ukraine (ref)')]=\
+    timelines_merge_regions(timelines(country_region='Ukraine', default_loc=''))
+  out[('', 'Belarus (ref)')]=\
+    timelines_merge_regions(timelines(country_region='Belarus', default_loc=''))
   if ('Moscow+MO','Russia') not in out and ('Moscow+MO','Russia') in tls:
     out.update({('Moscow+MO (ref)','Russia'):tls[('Moscow+MO','Russia')]})
   lastdate=out[tls_list[0][0]].dates[-1]
