@@ -77,7 +77,7 @@ REGIONS:List[Tuple[str,str,str]]=[
   ("Vologda oblast","Вологодская область", "Vologda Oblast"),
   ("Republic of Kalmykia","Республика Калмыкия", "Kalmykia Republic"),
   ("Republic of Mariy El","Республика Марий Эл", "Mari El Republic"),
-  ("Republic of Chuvashia","Республика Чувашия", ""),
+  ("Republic of Chuvashia","Республика Чувашия", "Chuvashia Republic"),
   ("Astrahan oblast","Астраханская область", "Astrakhan Oblast"),
   ("Magadan oblast","Магаданская область", "Magadan Oblast"),
   ("Sevastopol","Севастополь", "Sevastopol"),

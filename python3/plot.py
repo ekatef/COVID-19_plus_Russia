@@ -7,9 +7,9 @@ if __name__ == '__main__':
 from covid19ru.plot import plot, plot_sliding
 
 def plot_all():
-  plot(show=False, save_name='ruscovid.png', labels_in_russian=False,
+  plot(show=True, save_name='ruscovid.png', labels_in_russian=False,
        min_threshold=30, rng=(None,10), title_suffix=', Top-10')
-  plot(show=False, save_name='ruscovid_10_20.png', labels_in_russian=False,
+  plot(show=True, save_name='ruscovid_10_20.png', labels_in_russian=False,
        min_threshold=30, rng=(10,20), title_suffix=', Places 11..21', right_margin=1)
   plot(show=True, save_name='ruscovid_ru.png', labels_in_russian=True,
        min_threshold=30, rng=(None,10), title_suffix=', первая десятка')
