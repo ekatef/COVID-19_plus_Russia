@@ -4,21 +4,24 @@ set -e -x
 
 git fetch upstream
 git rebase upstream/master
+
+(
 cd python3
 python -c 'from rename import *; rename_crimea()'
 
-(
-  set +e
-  python check.py
-  NERR=$?
-  if test "$NERR" != "6" ; then
-    echo "New errors have appeared. Check the list above."
-    exit
-  fi
-)
+  (
+    set +e
+    python check.py
+    NERR=$?
+    if test "$NERR" != "6" ; then
+      echo "New errors have appeared. Check the list above."
+      exit
+    fi
+  )
 
 python dump.py
 python plot.py
+)
 
 
 git add csse_covid_19_data/csse_covid_19_daily_reports/*csv
