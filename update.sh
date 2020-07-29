@@ -33,3 +33,5 @@ git commit -m 'Update timelines'
 
 git add python3/*.png
 git commit -m 'Update plots'
+
+git push -f origin master
