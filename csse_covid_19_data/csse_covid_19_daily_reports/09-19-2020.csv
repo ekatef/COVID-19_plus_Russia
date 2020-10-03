@@ -3904,7 +3904,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,Cherkasy Oblast,Ukraine,2020-09-20 04:22:00,49.4444,32.0598,2983,48,1345,1590,"Cherkasy Oblast, Ukraine",247.2746323,1.609118337
 ,,Chernihiv Oblast,Ukraine,2020-09-20 04:22:00,51.4982,31.2893,3188,46,738,2404,"Chernihiv Oblast, Ukraine",316.9789559,1.442910916
 ,,Chernivtsi Oblast,Ukraine,2020-09-20 04:22:00,48.2917,25.9352,12917,329,7514,5074,"Chernivtsi Oblast, Ukraine",1428.280778,2.547031044
-,,Crimea Republic*,Ukraine,2020-09-20 04:22:00,45.2835,34.2008,3573,47,2400,1126,"Crimea Republic*, Ukraine",186.7033559,1.315421215
+,,Republic of Crimea,Russia,2020-09-20 04:22:00,45.2835,34.2008,3573,47,2400,1126,"Republic of Crimea, Russia",186.7033559,1.315421215
 ,,Dnipropetrovsk Oblast,Ukraine,2020-09-20 04:22:00,48.4647,35.0462,3878,89,1830,1959,"Dnipropetrovsk Oblast, Ukraine",120.9427044,2.294997421
 ,,Donetsk Oblast,Ukraine,2020-09-20 04:22:00,48.0159,37.8028,2371,35,982,1354,"Donetsk Oblast, Ukraine",56.9144586,1.476170392
 ,,Ivano-Frankivsk Oblast,Ukraine,2020-09-20 04:22:00,48.9226,24.7111,12212,277,5354,6581,"Ivano-Frankivsk Oblast, Ukraine",889.2759668,2.268260727
@@ -3920,7 +3920,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,Odessa Oblast,Ukraine,2020-09-20 04:22:00,46.4846,30.7326,11205,160,2424,8621,"Odessa Oblast, Ukraine",470.7374004,1.427933958
 ,,Poltava Oblast,Ukraine,2020-09-20 04:22:00,49.5883,34.5514,1461,33,714,714,"Poltava Oblast, Ukraine",104.3244297,2.258726899
 ,,Rivne Oblast,Ukraine,2020-09-20 04:22:00,50.6199,26.2516,11015,151,8576,2288,"Rivne Oblast, Ukraine",951.7835032,1.370857921
-,,Sevastopol*,Ukraine,2020-09-20 04:22:00,44.6054,33.522,763,22,517,224,"Sevastopol*, Ukraine",172.152767,2.883355177
+,,Sevastopol,Russia,2020-09-20 04:22:00,44.6054,33.522,763,22,517,224,"Sevastopol, Russia",172.152767,2.883355177
 ,,Sumy Oblast,Ukraine,2020-09-20 04:22:00,50.9077,34.7981,2916,50,1302,1564,"Sumy Oblast, Ukraine",269.6459648,1.714677641
 ,,Ternopil Oblast,Ukraine,2020-09-20 04:22:00,49.5535,25.5948,11016,133,4862,6021,"Ternopil Oblast, Ukraine",1053.276717,1.207334786
 ,,Vinnytsia Oblast,Ukraine,2020-09-20 04:22:00,49.2331,28.4682,5200,98,3461,1641,"Vinnytsia Oblast, Ukraine",333.2491666,1.884615385
